@@ -18,11 +18,9 @@ def start_system(components, bind_to, hooks={}):
 
             started_components[k] = component
 
-            for hook in hooks:
+            for hook in hooks.get(k, []):
                 code = hook.__code__
                 argc, argn = code.co_argcount, code.co_varnames
-
-                print(started_components, argc, argn, sep=", ")
 
                 args = {
                     m: started_components[m]

@@ -33,9 +33,11 @@ components = {
         "marshmallow": ({"app", }, lambda app: Marshmallow(app)),
         "db": ({"config", }, start_db)
     },
-    "hooks": [
-        register_blueprint
-    ],
+    "hooks": {
+        "app" :[
+          register_blueprint
+        ],
+    },
     "bind_to": "app"
 }
 ```
