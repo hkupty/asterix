@@ -2,6 +2,7 @@
 Manage python components startup quickly and efficiently
 
 [![Code Climate](https://codeclimate.com/github/hkupty/asterix/badges/gpa.svg)](https://codeclimate.com/github/hkupty/asterix)
+[![PyPI version](https://badge.fury.io/py/asterix.svg)](https://badge.fury.io/py/asterix)
 
 ## What is asterix
 
