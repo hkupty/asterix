@@ -1,6 +1,8 @@
 # asterix
 Manage python components startup quickly and efficiently
 
+[![Code Climate](https://codeclimate.com/github/hkupty/asterix/badges/gpa.svg)](https://codeclimate.com/github/hkupty/asterix)
+
 ## What is asterix
 
 Describe the initialization of your application and let asterix manage the
