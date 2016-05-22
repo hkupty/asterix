@@ -6,13 +6,17 @@ from os import path
 
 here = path.abspath(path.dirname(__file__))
 
-with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read()
+long_description = """Manage python components startup quickly and efficiently
+
+Asterix allows you to build a dependency graph of the components your
+application require and make them globally available by binding them
+to your app (be it a component is started or any object you supply).
+"""
 
 setup(
     name='asterix',
     version='0.0.2',
-    description=' Manage python components startup quickly and efficiently',
+    description='Manage python components startup quickly and efficiently',
     long_description=long_description,
     url='https://github.com/hkupty/asterix',
     author='Henry "Ingvij" Kupty',
