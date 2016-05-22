@@ -5,18 +5,13 @@ component = namedtuple("Component", ("dependency_set", "start_command"))
 
 def all_deps_started(c, t): return (c & t) == c
 
-def run_hooks(hooks):
-    for hook in hooks.get(k, []):
+def run_hooks(hooks, started_components):
+    for hook in hooks:
         code = hook.__code__
-        argc, argn = code.co_argcount, code.co_varnames
+        agrl = code.co_varnames[:code.co_argcount]
 
-        args = {
-            m: started_components[m]
-            for m
-            in argn[:argc]
-        }
-
-        hook(**args)
+        if all_deps_started(set(argl), started_components.keys()):
+            hook(**{m: started_components[m] for m in argl})
 
 
 def start_components(components, deps_graph, k, started_components={}):
