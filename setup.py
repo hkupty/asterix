@@ -15,7 +15,7 @@ to your app (be it a component is started or any object you supply).
 
 setup(
     name='asterix',
-    version='0.0.2',
+    version='0.1.0',
     description='Manage python components startup quickly and efficiently',
     long_description=long_description,
     url='https://github.com/hkupty/asterix',
