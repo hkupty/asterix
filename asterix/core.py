@@ -8,7 +8,7 @@ def all_deps_started(c, t): return (c & t) == c
 def run_hooks(hooks, started_components):
     for hook in hooks:
         code = hook.__code__
-        agrl = code.co_varnames[:code.co_argcount]
+        argl = code.co_varnames[:code.co_argcount]
 
         if all_deps_started(set(argl), started_components.keys()):
             hook(**{m: started_components[m] for m in argl})
