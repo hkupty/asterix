@@ -47,7 +47,7 @@ def start_system(components, bind_to, hooks={}):
     deps = build_deps_graph(components)
     started_components = start_components(components, deps, None)
 
-    run_hooks(hooks)
+    run_hooks(hooks, started_components)
 
     if type(bind_to) is str:
         master = started_components[bind_to]
