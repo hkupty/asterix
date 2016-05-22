@@ -36,8 +36,8 @@ setup(
         'Programming Language :: Python :: 3.5',
     ],
     keywords='component management system startup',
-    # packages=find_packages(exclude=['contrib', 'docs', 'tests']),
-    py_modules=["asterix"],
+    packages=find_packages(exclude=['contrib', 'docs', 'tests']),
+    # py_modules=["asterix"],
     # install_requires=['peppercorn'],
     # extras_require={
         # 'dev': ['check-manifest'],
