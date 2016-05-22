@@ -1,0 +1,2 @@
+pytest==2.9.1
+bumpversion==0.5.3
