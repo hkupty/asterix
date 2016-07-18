@@ -21,4 +21,4 @@ class dummy_master(object):
         setattr(self, "__components", dummy())
 
     def get(self, name):
-        return self.__components.components.get(name)
+        return getattr(self, "__components").components.get(name)
