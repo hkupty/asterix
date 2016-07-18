@@ -8,7 +8,7 @@ class dummy(object):
     def __init__(self):
         self.components = {}
 
-    def get(self, name, default):
+    def get(self, name, default=None):
         if name not in self.components:
             self.components[name] = Mock()
 
@@ -19,3 +19,6 @@ class dummy_master(object):
 
     def __init__(self):
         setattr(self, "__components", dummy())
+
+    def get(self, name):
+        return self.__components.components.get(name)
