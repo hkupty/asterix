@@ -3,7 +3,9 @@ from collections import defaultdict, namedtuple
 
 component = namedtuple("Component", ("dependency_set", "start_command"))
 
+
 def all_deps_started(c, t): return (c & t) == c
+
 
 def run_hooks(hooks, started_components):
     for hook in hooks:
@@ -29,6 +31,7 @@ def start_components(components, deps_graph, k, started_components={}):
                 components, deps_graph, j, started_components
             )
     return started_components
+
 
 def build_deps_graph(components):
     deps = defaultdict(set)
@@ -56,6 +59,10 @@ def start_system(components, bind_to, hooks={}):
 
     setattr(master, '__components', started_components)
     return master
+
+
+def all_components(master):
+    return master.__components
 
 
 def get_component(name, master):
